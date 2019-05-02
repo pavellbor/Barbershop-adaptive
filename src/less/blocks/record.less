@@ -1,0 +1,346 @@
+.record {
+	font-size: 18px;
+	line-height: 18px;
+	color: #000000;
+
+	padding: 30px 20px 73px;
+
+	background-color: #f8f5f2;
+}
+
+.record__wrapper {}
+
+.record__title {
+	.h-reset();
+
+	margin-bottom: 30px;
+
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 30px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.record__on-main {
+	display: none;
+}
+
+.record_form {}
+
+.record__username,
+.record__contacts {
+	margin-bottom: 32px;
+}
+
+.record__item {
+	.p-reset();
+
+	margin-bottom: 6px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.record__username input,
+.record__contacts input {
+	.input-reset();
+
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 50px;
+	padding: 10px 18px 12px;
+	
+	background-color: #ffffff;
+	border: 1px solid #e5ddd5;	
+
+	&::placeholder {
+		font-size: 18px;
+		line-height: 18px;
+		color: #000000;
+	}
+
+	&:hover {
+		border: 1px solid #d5c9bd;
+	}
+
+	&:focus {
+		border: 1px solid #999999;
+		outline: none;
+	}
+}
+
+.record__text {
+	.p-reset();
+
+	margin-bottom: 35px;
+}
+
+.record__text textarea {
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 112px;
+	padding: 14px 18px 16px;
+	
+	background-color: #ffffff;
+	border: 1px solid #e5ddd5;	
+
+	&::placeholder {
+		font-size: 18px;
+		line-height: 18px;
+		color: #000000;
+	}
+
+	&:hover {
+		border: 1px solid #d5c9bd;
+	}
+
+	&:focus {
+		border: 1px solid #999999;
+		outline: none;
+	}
+}
+
+.record__beard-model,
+.record__optional {
+	.fieldset-reset();
+}
+
+.record__beard-model {
+	margin-bottom: 10px;
+}
+
+.record__optional {
+	margin-bottom: 45px;
+}
+
+.record__subtitle {
+	margin-bottom: 40px;
+
+	font-size: 20px;
+	line-height: 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.record__button {
+	.button-reset();
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	min-width: 130px;
+	min-height: 50px;
+
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 18px;
+	color: #ffffff;
+	text-transform: uppercase;
+
+	background-color: #826550;
+
+	&:hover {
+		background-color: #6a4d38;
+	}
+
+	&:active {
+		color: rgba(255, 255, 255, 0.3);
+	}
+}
+
+
+@media (min-width: @tablet-width) {
+
+	.record {
+		position: relative;
+
+		padding: 56px 0 76px;
+
+		font-size: 24px;
+		line-height: 24px;
+	}
+
+	.record__wrapper {
+		position: relative;
+
+		width: 640px;
+		margin: 0 auto;
+	}
+
+	.record__title {
+		max-width: 330px;
+		margin-bottom: 76px;
+
+		font-size: 40px;
+		line-height: 40px;
+		text-align: left;
+	}
+
+	.record__on-main {
+		position: absolute;
+		top: -3px;
+		right: 0;
+
+		display: flex;
+		width: auto;
+		min-width: 160px;
+
+		&:hover {
+			border: 1px solid #d5c9bd;
+		}
+
+		&:active {
+			color: rgba(0, 0, 0, 0.3);
+			background-color: #d5c9bd;
+		}
+	}
+
+	.record__username,
+	.record__contacts {
+		margin-bottom: 35px;
+	}
+
+	.record__username {
+		display: flex;
+	}
+
+	.record__username .record__item {
+		margin-right: -1px;
+		margin-bottom: 0px;
+	}
+
+	.record__contacts .record__item {
+		margin-bottom: 35px;
+	}
+
+	.record__username input,
+	.record__contacts input {
+		min-height: 70px;
+		padding: 10px 25px 12px;	
+
+		&::placeholder {
+			font-size: 24px;
+			line-height: 24px;
+		}
+	}
+
+	.record__item:nth-child(2) {
+		order: -1;
+	}
+
+	.record__text {
+		margin-bottom: 50px;
+	}
+
+	.record__text textarea {
+		min-height: 211px;
+		padding: 21px 24px;
+
+		&::placeholder {
+			font-size: 24px;
+			line-height: 24px;
+			color: #000000;
+		}
+	}
+
+	.record__beard-model,
+	.record__optional {
+		position: relative;
+
+		&::before {
+			content: "";
+
+			position: absolute;
+			top: 15px;
+
+			width: 100%;
+			min-height: 1px;
+
+			background-color: #e5ddd5;
+		}
+	}
+
+	.record__beard-model {
+		margin-bottom: 51px;
+	}
+
+	.record__optional {
+		margin-bottom: 59px;
+	}
+
+	.record__subtitle {
+		position: relative;
+
+		margin-bottom: 45px;
+		padding: 0 30px;
+
+		font-size: 30px;
+		line-height: 30px;
+
+		background-color: #f8f5f2;
+	}
+
+	.record__optional .record__subtitle {
+		margin-bottom: 69px;
+	}
+
+	.record__button {
+		min-height: 70px;
+
+		font-size: 24px;
+		line-height: 24px;
+	}
+}
+
+
+@media (min-width: @desktop-width) {
+	
+	.record {
+		padding: 56px 120px 87px;
+	}
+
+	.record__wrapper {
+		width: 960px;
+	}
+
+	.record__title {
+		max-width: 640px;
+	}
+
+	.record__username,
+	.record__contacts {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 35px;
+	}
+
+	.record__username .record__item {
+		width: 295px;
+		margin: 0;
+	}
+
+	.record__contacts .record__item {
+		width: 462px;
+		margin: 0;
+	}
+
+	.record__text {
+		margin-bottom: 64px;
+	}
+
+	.record__beard-model {
+		margin-bottom: 50px;
+	}
+
+	.record__optional {
+		margin-bottom: 80px;
+	}
+
+	.record__subtitle {
+		margin-bottom: 50px;
+		padding: 0 47px;
+	}
+}

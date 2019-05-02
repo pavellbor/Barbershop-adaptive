@@ -1,0 +1,156 @@
+.slider__list {
+	margin-bottom: 28px;
+}
+
+.slider__item {
+	display: none;
+	margin-bottom: 0;
+}
+
+.slider__item--active {
+	display: flex;
+}
+
+.slider__toggles {
+	.p-reset();
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slider__toggle {
+	.button-reset();
+
+	display: block;
+	box-sizing: border-box;
+	width: 7px;
+	height: 7px;
+	margin-right: 25px;
+
+	border: 1px solid #ffffff;
+	transform: rotate(45deg);
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.slider__toggle--active {
+	background-color: #ffffff;
+}
+
+.reviews .slider__toggle {
+	border: 1px solid #353535;
+}
+
+.reviews .slider__toggle--active {
+	background-color: #353535;
+}
+
+.slider__arrow {
+	display: none;
+}
+
+.slider--nojs .slider__list {
+	margin-bottom: 0;
+}
+
+.slider--nojs .slider__item {
+	display: flex;
+	margin-bottom: 30px;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+.slider--nojs .slider__toggles {
+	display: none;
+}
+
+
+@media (min-width: @tablet-width) {
+
+	.slider__list {
+		margin-bottom: 0;
+	}
+
+	.advantages .slider__item {
+		display: block;
+		margin-bottom: 45px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.advantages .slider__toggles {
+		display: none;
+	}
+
+	.reviews .slider__toggles {
+		margin: 0 auto;
+		margin-top: -14px;
+	}
+
+	.slider__arrow {
+		.button-reset();
+
+		display: flex;
+		flex-shrink: 0;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+
+		border: 1px solid #e5ddd5;
+
+		&::after {
+			content: "";
+
+			border-top: 6px solid transparent;
+			border-bottom: 6px solid transparent;
+		}
+	}
+
+	.slider__arrow--prev {
+		order: -1;
+
+		&:after {
+			border-right: 12px solid #000000;
+		}
+	}
+
+	.slider__arrow--next {
+		&:after {
+			border-left: 12px solid #000000;
+		}
+	}
+
+	.slider--nojs .slider__arrow {
+		display: none;
+	}
+}
+
+
+@media (min-width: @desktop-width) {
+
+	.advantages .slider__item {
+		margin-bottom: 0;
+	}
+
+	.reviews .slider {
+		padding-bottom: 50px;
+	}
+
+	.reviews .slider__toggles {
+		margin: 0 auto;
+		padding: 0;
+
+		background-color: transparent;
+	}
+
+	.reviews .slider__list {
+		margin-bottom: 42px;
+	}
+}
